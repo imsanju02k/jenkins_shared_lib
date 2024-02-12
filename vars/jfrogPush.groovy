@@ -9,7 +9,7 @@ def call() {
     // }
     // // sh "docker image push ${hubUser}/${project}:${ImageTag}"
    
-    sh 'cd imsanju02k/Java_app_3.0'
+    sh 'cd Java_app_3.0'
     sh 'python3 jfrog.py'
 }
 
