@@ -8,7 +8,7 @@ def call() {
     //     sh "jfrog rt docker-login"
     // }
     // // sh "docker image push ${hubUser}/${project}:${ImageTag}"
-    sh "python3 jfrog.py"
+    sh 'python3 jfrog.py'
 }
 
 
