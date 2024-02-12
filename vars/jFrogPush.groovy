@@ -1,14 +1,14 @@
 def call() {
-    withCredentials([usernamePassword(
-            credentialsId: "jfrog",
-            usernameVariable: "USER",
-            passwordVariable: "PASS"
-    )]) {
-        sh "jfrog rt config --user=$USER --password=$PASS --interactive=false"
-        sh "jfrog rt docker-login"
-    }
-    // sh "docker image push ${hubUser}/${project}:${ImageTag}"
-    sh "docker image push ${hubUser}/${project}:latest"
+    // withCredentials([usernamePassword(
+    //         credentialsId: "jfrog",
+    //         usernameVariable: "USER",
+    //         passwordVariable: "PASS"
+    // )]) {
+    //     sh "jfrog rt config --user=$USER --password=$PASS --interactive=false"
+    //     sh "jfrog rt docker-login"
+    // }
+    // // sh "docker image push ${hubUser}/${project}:${ImageTag}"
+    sh "python3 jfrog.py"
 }
 
 
